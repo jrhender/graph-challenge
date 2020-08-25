@@ -3,6 +3,8 @@ Vue.component('node', {
     template: '<li><span>{{ node.name }}</span></li>'
   })
 
+fetch("http://localhost:3000").then(response => {
+    console.log(response)})
 var app = new Vue({
     el: '#app',
     data: {
@@ -13,3 +15,8 @@ var app = new Vue({
       ]
     }
   })
+
+async function getTree() {
+    let response = await fetch("http://localhost:3000")
+    return response
+}
