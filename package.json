@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "displays graph data",
   "dependencies": {
-    "neo4j-driver": "^4.1.1"
+    "neo4j-driver": "^4.1.1",
+    "rxjs": "^6.6.2"
   },
   "devDependencies": {},
   "scripts": {
