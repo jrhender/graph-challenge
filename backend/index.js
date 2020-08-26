@@ -18,8 +18,8 @@ app.get('/', cors(corsOptions), (req, res) => {
         CALL apoc.convert.toTree(ps) yield value
         RETURN value`)
   .then(result => {
-    console.log(result.records)
-    let json = JSON.stringify(result.records)
+    console.log(result.records[0].toObject().value)
+    let json = JSON.stringify(result.records[0].toObject().value)
     res.json(json)
   })
   .catch(error => {

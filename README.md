@@ -1,1 +1,2 @@
 Executing nginx for development: `sudo docker run --name frontend -v "$(pwd)/frontend:/usr/share/nginx/html" -d -p 8080:80 nginx`
+Useful article how to use plugin with docker: https://medium.com/swlh/deployment-of-neo4j-docker-container-with-apoc-and-graph-algorithms-plugins-bf48226928f4
