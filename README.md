@@ -1,1 +1,1 @@
-Executing nginx for development: `sudo docker run --name some-nginx -v "$(pwd)/frontend:/usr/share/nginx/html" -d -p 8080:80 nginx`
+Executing nginx for development: `sudo docker run --name frontend -v "$(pwd)/frontend:/usr/share/nginx/html" -d -p 8080:80 nginx`

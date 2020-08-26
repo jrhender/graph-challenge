@@ -3,8 +3,9 @@ Vue.component('node', {
     template: '<li><span>{{ node.name }}</span></li>'
   })
 
-fetch("http://localhost:3000").then(response => {
-    console.log(response)})
+fetch("http://localhost:3000")
+  .then(response => response.json())
+  .then(body => console.log(body))
 var app = new Vue({
     el: '#app',
     data: {
