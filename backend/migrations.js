@@ -14,12 +14,12 @@ rxSession
             (b1:Node { name: "B-1", description: "This is a description of B-1" }),
             (b2:Node { name: "B-2", description: "This is a description of B-2" }),
             (b3:Node { name: "B-3", description: "This is a description of B-3" }),
-            (a)<-[:PARENT]-(b),
-            (a)<-[:PARENT]-(c),
-            (a)<-[:PARENT]-(d),
-            (b)<-[:PARENT]-(b1),
-            (b)<-[:PARENT]-(b2),
-            (b)<-[:PARENT]-(b3)`)
+            (a)<-[:CHILD]-(b),
+            (a)<-[:CHILD]-(c),
+            (a)<-[:CHILD]-(d),
+            (b)<-[:CHILD]-(b1),
+            (b)<-[:CHILD]-(b2),
+            (b)<-[:CHILD]-(b3)`)
       .records()
       .pipe(map(record => record.get('name')))
   )

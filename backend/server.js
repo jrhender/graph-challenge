@@ -14,7 +14,7 @@ const corsOptions = {
 app.get('/', cors(corsOptions), (req, res) => {
   const session = driver.session()
   session
-  .run(`MATCH p=(n:Node)<-[:PARENT*]-(m)
+  .run(`MATCH p=(n:Node)<-[:CHILD*]-(m)
         WITH COLLECT(p) AS ps
         CALL apoc.convert.toTree(ps) yield value
         RETURN value`)
