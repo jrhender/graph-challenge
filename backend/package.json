@@ -5,13 +5,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "neo4j-driver": "^4.1.1",
-    "rxjs": "^6.6.2"
+    "neo4j-driver": "^4.1.1"
   },
   "devDependencies": {},
   "scripts": {
-    "migrate": "node migrations.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "node migrations.js"
   },
   "author": "",
   "license": "ISC"
