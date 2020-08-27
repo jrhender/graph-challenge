@@ -2,9 +2,10 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const port = 3000
+const dbHost = process.argv[2] // Should be the first command line arg
 
 const neo4j = require('neo4j-driver');
-const driver = new neo4j.driver("neo4j://neo4j:7687", neo4j.auth.basic("neo4j", "test"));
+const driver = new neo4j.driver(`neo4j://${dbHost}:7687`, neo4j.auth.basic("neo4j", "test"));
 
 const corsOptions = {
   origin: 'http://localhost:8080'

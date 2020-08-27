@@ -10,7 +10,7 @@
   "main": "server.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js localhost",
     "migrate": "node migrations.js"
   },
   "author": "",
