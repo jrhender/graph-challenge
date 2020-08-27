@@ -1,7 +1,7 @@
 <template>
-    <div id="sidebar1" class="sidebar" aria-label="sidebar with node information"
+    <div class="sidebar" aria-label="sidebar with node information"
         :aria-hidden="isHidden">
-        <button id="sidebar_close">X</button>
+        <button v-on:click="closeSidebar">X</button>
         <div class="sidebar__content">
             <span>{{name}}</span>
             <span>{{description}}</span>
@@ -16,6 +16,11 @@ export default {
     description: String,
     isHidden: Boolean
   },
+  methods: {
+    closeSidebar() {
+      this.$emit('closeSidebar')
+    }
+  }
 };
 </script>
 

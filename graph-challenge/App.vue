@@ -1,7 +1,7 @@
 <template>
   <div>
     <tree :tree-data="tree"></tree>
-    <sidebar :name="name" :description="description" :is-hidden="isHidden"/>
+    <sidebar v-on:closeSidebar="hideSidebar" :name="name" :description="description" :is-hidden="isHidden"/>
   </div>
 </template>
 
@@ -36,6 +36,11 @@ export default {
       this.description = description
       this.isHidden = false
     });
+  },
+  methods: {
+    hideSidebar: function() {
+      this.isHidden = true
+    }
   }
 };
 </script>
