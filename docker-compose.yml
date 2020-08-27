@@ -9,3 +9,8 @@ services:
             - ./neo4j/plugins:/plugins
         environment:
             NEO4J_AUTH: neo4j/test
+
+    frontend:
+        build: ./graph-challenge
+        ports:
+            - "8080:8080"

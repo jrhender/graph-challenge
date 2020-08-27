@@ -27,7 +27,6 @@ export default {
     .then(response => response.json())
     .then(body => {
       const tree = JSON.parse(body)
-      console.log(tree)
       self.tree = tree
     })
   },
