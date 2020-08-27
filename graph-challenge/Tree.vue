@@ -1,13 +1,13 @@
 <template>
   <div>
     <ul class="tree">
-      <node-tree :node="treeData" :selectedNode="selectedNode"></node-tree>
+      <tree-node :node="treeData" :selectedNode="selectedNode"></tree-node>
     </ul>
   </div>
 </template>
 
 <script>
-import NodeTree from "./NodeTree";
+import TreeNode from "./TreeNode";
 
 export default {
   props: {
@@ -15,7 +15,7 @@ export default {
     selectedNode: String
   },
   components: {
-    NodeTree
+    TreeNode
   }
 };
 </script>
