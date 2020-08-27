@@ -1,18 +1,24 @@
 <template>
   <div>
     <tree :tree-data="tree"></tree>
+    <sidebar :name="name" :description="description" :is-hidden="isHidden"/>
   </div>
 </template>
 
 <script>
 import Tree from "./Tree";
+import Sidebar from "./Sidebar"
 
 export default {
   data: () => ({
-    tree: {}
+    tree: {},
+    name: "testName",
+    description: "testDescription",
+    isHidden: true
   }),
   components: {
-    Tree
+    Tree,
+    Sidebar
   },
   created: function () {
     const self = this
