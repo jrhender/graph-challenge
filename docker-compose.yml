@@ -6,12 +6,12 @@ services:
             - "7474:7474" 
             - "7687:7687"
         volumes:
-            - ./neo4j/plugins:/plugins
+            - ./backend/neo4j/plugins:/plugins
         environment:
             NEO4J_AUTH: neo4j/test
 
     frontend:
-        build: ./graph-challenge
+        build: ./frontend
         ports:
             - "8080:8080"
     
