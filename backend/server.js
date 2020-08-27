@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 const neo4j = require('neo4j-driver');
-const driver = new neo4j.driver("neo4j://localhost:7687", neo4j.auth.basic("neo4j", "test"));
+const driver = new neo4j.driver("neo4j://neo4j:7687", neo4j.auth.basic("neo4j", "test"));
 
 const corsOptions = {
   origin: 'http://localhost:8080'
@@ -18,7 +18,6 @@ app.get('/', cors(corsOptions), (req, res) => {
         CALL apoc.convert.toTree(ps) yield value
         RETURN value`)
   .then(result => {
-    console.log(result.records[0].toObject().value)
     let json = JSON.stringify(result.records[0].toObject().value)
     res.json(json)
   })
@@ -29,5 +28,5 @@ app.get('/', cors(corsOptions), (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })
