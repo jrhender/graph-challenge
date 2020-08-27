@@ -29,6 +29,13 @@ export default {
       console.log(tree)
       self.tree = tree
     })
+  },
+  mounted() {
+    this.$root.$on('node clicked', (name, description) => {
+      this.name = name
+      this.description = description
+      this.isHidden = false
+    });
   }
 };
 </script>

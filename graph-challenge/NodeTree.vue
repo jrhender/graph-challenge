@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li v-on:click.stop="nodeClicked">
     <span>{{ node.name }}</span>
 
     <ul v-if="node.parent && node.parent.length">
@@ -13,6 +13,11 @@ export default {
   name: "node",
   props: {
     node: Object
+  },
+  methods: {
+    nodeClicked() {
+      this.$root.$emit('node clicked', this.node.name, this.node.description)
+    }
   }
 };
 </script>
