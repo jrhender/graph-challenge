@@ -9,22 +9,20 @@ import Tree from "./Tree";
 
 export default {
   data: () => ({
-    tree: {
-      label: "A cool folder",
-      children: [
-        {
-          label: "A cool sub-folder 1",
-          children: [
-            { label: "A cool sub-sub-folder 1" },
-            { label: "A cool sub-sub-folder 2" }
-          ]
-        },
-        { label: "This one is not that cool" }
-      ]
-    }
+    tree: {}
   }),
   components: {
     Tree
+  },
+  created: function () {
+    const self = this
+    fetch("http://localhost:3000")
+    .then(response => response.json())
+    .then(body => {
+      const tree = JSON.parse(body)
+      console.log(tree)
+      self.tree = tree
+    })
   }
 };
 </script>
