@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tree :tree-data="tree"></tree>
+    <tree :tree-data="tree" :selectedNode="selectedNode"></tree>
     <sidebar v-on:closeSidebar="hideSidebar" :name="name" :description="description" :is-hidden="isHidden"/>
   </div>
 </template>
@@ -14,6 +14,7 @@ export default {
     tree: {},
     name: "testName",
     description: "testDescription",
+    selectedNode: "",
     isHidden: true
   }),
   components: {
@@ -34,12 +35,14 @@ export default {
     this.$root.$on('node clicked', (name, description) => {
       this.name = name
       this.description = description
+      this.selectedNode = name
       this.isHidden = false
     });
   },
   methods: {
     hideSidebar: function() {
       this.isHidden = true
+      this.selectedNode = ''
     }
   }
 };

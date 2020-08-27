@@ -1,9 +1,9 @@
 <template>
   <li v-on:click.stop="nodeClicked">
-    <span>{{ node.name }}</span>
+    <span v-bind:class="{ selected: selectedNode == node.name }">{{ node.name }}</span>
 
     <ul v-if="node.parent && node.parent.length">
-      <node v-for="child in node.parent" :node="child" v-bind:key="child.name"></node>
+      <node v-for="child in node.parent" :node="child" :selectedNode="selectedNode" v-bind:key="child.name"></node>
     </ul>
   </li>
 </template>
@@ -12,7 +12,8 @@
 export default {
   name: "node",
   props: {
-    node: Object
+    node: Object,
+    selectedNode: String
   },
   methods: {
     nodeClicked() {
@@ -21,3 +22,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.selected {
+  border-color: red
+}
+</style>

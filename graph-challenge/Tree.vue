@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="tree">
-      <node-tree :node="treeData"></node-tree>
+      <node-tree :node="treeData" :selectedNode="selectedNode"></node-tree>
     </ul>
   </div>
 </template>
@@ -11,7 +11,8 @@ import NodeTree from "./NodeTree";
 
 export default {
   props: {
-    treeData: Object
+    treeData: Object,
+    selectedNode: String
   },
   components: {
     NodeTree
