@@ -15,9 +15,10 @@ Useful article how to use neo4j APOC plugin in with docker: https://medium.com/s
 
 ## Todo
 ### Backend
- - Get node with no children first to then use in tree query
  - Change from neo4j stream API as not really using
- - Investigate why data persists between container restarts for neo4i
+ - Investigate why data persists between container restarts for neo4j
 ### Frontend
  - Add unit tests
- - Fix sidebar text
+ - Add typescript object
+ - Make sure that eslint is working
+ - Make responsive (e.g. change to bottom bar on thin screen)
