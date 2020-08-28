@@ -20,11 +20,10 @@ app.get('/', cors(corsOptions), async (req, res, next) => {
     // Assuming that only a single tree is wanted
     const rootNodeName = rootNodes.records[0].toObject().n.properties.name;
 
-    const tree = await session
-      .run(`MATCH p=(n:Node {name:'${rootNodeName}'})<-[:CHILD*]-(m)
-                              WITH COLLECT(p) AS ps
-                              CALL apoc.convert.toTree(ps) yield value
-                              RETURN value`);
+    const tree = await session.run(`MATCH p=(n:Node {name:'${rootNodeName}'})<-[:CHILD*]-(m)
+                                    WITH COLLECT(p) AS ps
+                                    CALL apoc.convert.toTree(ps) yield value
+                                    RETURN value`);
     const json = JSON.stringify(tree.records[0].toObject().value);
     res.json(json);
   } catch (error) {
