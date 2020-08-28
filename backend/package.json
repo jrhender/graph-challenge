@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "node server.js localhost",
-    "migrate": "node migrations.js"
+    "migrate": "node migration/migrations.js"
   },
   "author": "",
   "license": "ISC"
