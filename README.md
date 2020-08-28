@@ -12,10 +12,11 @@
 
 ## Remarks
 Useful article how to use neo4j APOC plugin in with docker: https://medium.com/swlh/deployment-of-neo4j-docker-container-with-apoc-and-graph-algorithms-plugins-bf48226928f4
+Vue has several APIs, which have varying compatibility with TypeScript: https://blog.theodo.com/2019/11/integrate-typescript-with-vue/
 
 ## Todo
 ### Backend
- - Change from neo4j stream API as not really using
+ - Import data from json and generate CREATE script
  - Investigate why data persists between container restarts for neo4j
 ### Frontend
  - Add unit tests
