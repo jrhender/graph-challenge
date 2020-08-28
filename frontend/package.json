@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vue build",
+    "serve": "vue serve src/App.vue",
+    "build": "vue build src/App.vue",
     "lint": "vue-cli-service lint"
   },
   "devDependencies": {
