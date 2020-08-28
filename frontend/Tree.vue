@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import TreeNode from "./TreeNode";
+import TreeNode from './TreeNode.vue';
 
 export default {
   props: {
     treeData: Object,
-    selectedNode: String
+    selectedNode: String,
   },
   components: {
-    TreeNode
-  }
+    TreeNode,
+  },
 };
 </script>
 

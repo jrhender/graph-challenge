@@ -13,13 +13,13 @@ export default {
   props: {
     name: String,
     description: String,
-    isHidden: Boolean
+    isHidden: Boolean,
   },
   methods: {
     closeSidebar() {
-      this.$emit('closeSidebar')
-    }
-  }
+      this.$emit('closeSidebar');
+    },
+  },
 };
 </script>
 
