@@ -23,8 +23,7 @@ async function main() {
   try {
     await session.run('MATCH (n) DETACH DELETE n;');
     const CREATEquery = generateCREATEquery();
-    await session
-      .writeTransaction((txc) => txc.run(CREATEquery));
+    await session.writeTransaction((txc) => txc.run(CREATEquery));
     const insertedResults = await session.run('MATCH (n) RETURN n');
     console.log(`inserted ${insertedResults.records.length} records`);
   } finally {
