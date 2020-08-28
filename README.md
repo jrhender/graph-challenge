@@ -20,5 +20,4 @@ Useful article how to use neo4j APOC plugin in with docker: https://medium.com/s
 ### Frontend
  - Add unit tests
  - Add typescript object
- - Make sure that eslint is working
  - Make responsive (e.g. change to bottom bar on thin screen)
