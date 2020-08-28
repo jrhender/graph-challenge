@@ -3,12 +3,11 @@
 ## How to run
 1. Install docker (for linux) and docker-compose
 2. Run `docker-compose up`. If making changes, run `docker-compose up --build`
-3. Run migrations to deploy data to neo4j: `cd backend; npm run migrate`
+3. Run migrations to deploy data to neo4j: `cd backend; npm install; npm run migrate`
 
 ## Development
 ### Frontend
-1. Install Vue-cli
-2. Run `vue serve`
+1. Run `cd frontend; npm install; npm run serve`
 
 ## Remarks
 - Useful article how to use neo4j APOC plugin in with docker: https://medium.com/swlh/deployment-of-neo4j-docker-container-with-apoc-and-graph-algorithms-plugins-bf48226928f4
