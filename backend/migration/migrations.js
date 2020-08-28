@@ -13,7 +13,7 @@ function generateCREATEquery() {
       relationshipCreation += `(${parent})<-[:CHILD]-(${neo4jName}),`;
     }
   });
-  return `CREATE ${nodeCreation}${relationshipCreation}`;
+  return `CREATE ${nodeCreation}${relationshipCreation}`.split(0, -1);
 }
 
 async function main() {
