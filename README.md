@@ -8,6 +8,7 @@
 ## Development
 ### Frontend
 1. Run `cd frontend; npm install; npm run serve`
+2. To run unit test: `npm run test:unit`
 
 ## Remarks
 - Useful article how to use neo4j APOC plugin in with docker: https://medium.com/swlh/deployment-of-neo4j-docker-container-with-apoc-and-graph-algorithms-plugins-bf48226928f4
@@ -17,6 +18,5 @@
 ### Backend
  - Investigate why data persists between container restarts for neo4j
 ### Frontend
- - Add unit tests
- - Add typescript object
+ - Add typescript object/interface for SidebarData
  - Make responsive (e.g. change to bottom bar on thin screen)

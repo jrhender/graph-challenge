@@ -1,6 +1,6 @@
 <template>
-  <li v-on:click.stop="nodeClicked">
-    <span v-bind:class="{ selected: selectedNode == node.name }">{{ node.name }}</span>
+  <li v-bind:id="node.name" v-on:click.stop="nodeClicked">
+    <span id="node.name" v-bind:class="{ selected: selectedNode == node.name }">{{ node.name }}</span>
 
     <ul v-if="node.child && node.child.length">
       <node v-for="child in node.child" :node="child"
