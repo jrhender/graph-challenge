@@ -1,4 +1,5 @@
-# Tree displayer
+# Graph Challenge
+Displays hard code data from a neo4j db via a VueJs page and Express API
 
 ## How to run
 1. Install docker (for linux) and docker-compose
